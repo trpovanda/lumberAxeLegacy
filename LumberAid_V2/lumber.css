@@ -1,0 +1,79 @@
+html,body { 
+	font-family: verdana,arial,helvetica,times new roman;
+	font-size: 10pt;
+	background-color: #DDDDDD;
+}
+
+table,tr,td { 
+	font-family: verdana,arial,helvetica,times new roman;
+	font-size: 8pt;
+}
+
+.smallFont {
+	font-family: verdana,arial,helvetica,times new roman;
+	font-size: 8pt;
+}
+
+.mediumFont {
+	font-family: verdana,arial,helvetica,times new roman;
+	font-size: 10pt;
+}
+
+.largeFont {
+	font-family: verdana,arial,helvetica,times new roman;
+	font-size: 12pt;
+}
+
+.bottomBorder {
+	border-color: #000000;
+	border-style: solid;
+	border-top-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+}
+
+.topBorder {
+	border-color: #000000;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+}
+
+.leftBorder {
+	border-color: #000000;
+	border-style: solid;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-right-width: 0px;
+}
+
+.rightBorder {
+	border-color: #000000;
+	border-style: solid;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 1px;
+}
+
+.rightTopBorder {
+	border-color: #000000;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 1px;
+}
+
+.allBorder {
+	border-color: #000000;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+}
