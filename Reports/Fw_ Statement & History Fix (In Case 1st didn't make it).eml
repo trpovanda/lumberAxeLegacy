@@ -1,0 +1,2180 @@
+From: "Sandra Guido" <clubq@optonline.net>
+Subject: Fw: Statement & History Fix (In Case 1st didn't make it)
+Date: Tue, 27 Apr 2004 17:41:53 -0400
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_000_00A3_01C42C7F.0A9F5760"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Unsent: 1
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_00A3_01C42C7F.0A9F5760
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 8bit
+
+
+----- Original Message -----
+From: "Alex Diokmedjian" <daamazingone@yahoo.com>
+To: <clubq@optonline.net>
+Sent: Friday, April 23, 2004 9:32 PM
+Subject: Statement & History Fix (In Case 1st didn't make it)
+
+
+> Sandra,
+>   I have attached 2 files one will fix the problem
+> with the statement Aged account and the other will fix
+> the history report.  Below are the instructions to
+> update teh lumberaid program.
+>
+> 1) There are 2 attachments one named
+> "sprpStatement__UPDATE__4-23-2004.sql" and another one
+> named "rptHistory.xml".
+> 2) Save both attachments to a disk (A: Drive).
+> 3) take disk to jefferson lumber
+> 4) Once at jefferson insert disk into A: drive.
+> 5) Goto My Computer -> 3.5 floppy A: -> you should see
+> 2 files.
+> 6) RIGHT CLICK "rptHistory.xml"
+> 7) Once popup menu appears LEFT CLICK Copy.
+> 8) Close Window (Won't need this folder again)
+> 9) Goto My Computer -> Local Disk C: _> Program Files
+> -> SimplyAmazing -> Lumberaid -> Reports
+> 10) Once in the Reports Folder you should see a bunch
+> of files all ending in xml.
+> 11) Click on the Edit Menu -> Paste
+> 12) A popup will appear asking if you want to replace
+> or overwite answer YES.
+> 13) Close Window (Won't need this folder again)
+> 14) Start LumberAid program
+> 15) Click on Data Menu
+> 16) Click on Administration
+> 17) Click on Update button next to Stored Procedure
+> Update
+> 18) Goto My Computer -> 3.5 floppy A:
+> 19) Click on "sprpStatement__UPDATE__4-23-2004.sql" so
+> it is highlighted
+> 20) Click Open
+> 21) A popup will tell you when it is done.
+> 22) Close the administration window and that's it.
+>
+>
+> Mediajuggle ------>Design House Quality At Freelance
+> Prices http://www.mediajuggle.com
+>
+>
+>
+>
+>
+> __________________________________
+> Do you Yahoo!?
+> Yahoo! Photos: High-quality 4x6 digital prints for 25¢
+> http://photos.yahoo.com/ph/print_splash
+>
+
+
+----------------------------------------------------------------------------
+----
+
+
+> <?xml version="1.0" encoding="Windows-1252"?>
+> <Reports>
+>   <!--Report *** rptCustomerHdr ***-->
+>   <Report>
+>     <Name>rptCustomerHdr</Name>
+>     <DataSource>
+>       <ConnectionString>C:\Documents and Settings\Administrator\My
+Documents\Visual Studio
+Projects\LumberAid\Reports\rptHistory.xsd</ConnectionString>
+>       <RecordSource>Customer</RecordSource>
+>     </DataSource>
+>     <Layout>
+>       <Width>11010</Width>
+>       <MarginLeft>432</MarginLeft>
+>       <MarginTop>432</MarginTop>
+>       <MarginRight>432</MarginRight>
+>       <MarginBottom>720</MarginBottom>
+>       <Orientation>1</Orientation>
+>       <PaperSize>1</PaperSize>
+>     </Layout>
+>     <Font>
+>       <Name>Arial</Name>
+>       <Size>9</Size>
+>     </Font>
+>     <Groups />
+>     <Sections>
+>       <Section>
+>         <Name>Detail</Name>
+>         <Type>0</Type>
+>         <Height>1395</Height>
+>       </Section>
+>       <Section>
+>         <Name>Header</Name>
+>         <Type>1</Type>
+>         <Visible>0</Visible>
+>       </Section>
+>       <Section>
+>         <Name>Footer</Name>
+>         <Type>2</Type>
+>         <Height>405</Height>
+>       </Section>
+>       <Section>
+>         <Name>PageHeader</Name>
+>         <Type>3</Type>
+>         <Height>2685</Height>
+>       </Section>
+>       <Section>
+>         <Name>PageFooter</Name>
+>         <Type>4</Type>
+>         <Height>555</Height>
+>       </Section>
+>     </Sections>
+>     <Fields>
+>       <Field>
+>         <Name>ftrRight</Name>
+>         <Section>4</Section>
+>         <Text>"Page " &amp; [Page] &amp; " of " &amp; [Pages]</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>6285</Left>
+>         <Top>195</Top>
+>         <Width>4680</Width>
+>         <Height>300</Height>
+>         <Align>2</Align>
+>       </Field>
+>       <Field>
+>         <Name>fldLedgerSub</Name>
+>         <Section>0</Section>
+>         <Calculated>-1</Calculated>
+>         <Width>10620</Width>
+>         <Height>1395</Height>
+>         <CanGrow>-1</CanGrow>
+>         <Subreport>rptLedger</Subreport>
+>       </Field>
+>       <Field>
+>         <Name>Field</Name>
+>         <Section>2</Section>
+>         <Text>Total Balance:</Text>
+>         <Left>6525</Left>
+>         <Top>15</Top>
+>         <Width>1890</Width>
+>         <Height>345</Height>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field15</Name>
+>         <Section>2</Section>
+>         <Text>total_balance</Text>
+>         <Calculated>-1</Calculated>
+>         <Format>Currency</Format>
+>         <Left>8415</Left>
+>         <Top>15</Top>
+>         <Width>2205</Width>
+>         <Height>360</Height>
+>         <Align>2</Align>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field1</Name>
+>         <Section>3</Section>
+>         <Text>HISTORY </Text>
+>         <Left>4410</Left>
+>         <Width>1905</Width>
+>         <Height>435</Height>
+>         <Align>7</Align>
+>         <CanGrow>-1</CanGrow>
+>         <CanShrink>-1</CanShrink>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>18</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field2</Name>
+>         <Section>3</Section>
+>         <Text>customer_name</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>15</Left>
+>         <Top>585</Top>
+>         <Width>3450</Width>
+>         <Height>255</Height>
+>         <CanGrow>-1</CanGrow>
+>         <CanShrink>-1</CanShrink>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field3</Name>
+>         <Section>3</Section>
+>         <Text>city_state_zip</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>30</Left>
+>         <Top>1110</Top>
+>         <Width>3420</Width>
+>         <Height>255</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field6</Name>
+>         <Section>3</Section>
+>         <Text>starting_balance</Text>
+>         <Calculated>-1</Calculated>
+>         <Format>Currency</Format>
+>         <Left>8415</Left>
+>         <Top>1815</Top>
+>         <Width>2205</Width>
+>         <Height>360</Height>
+>         <Align>2</Align>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field7</Name>
+>         <Section>3</Section>
+>         <Text>Starting Balance:</Text>
+>         <Left>6525</Left>
+>         <Top>1815</Top>
+>         <Width>1890</Width>
+>         <Height>345</Height>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field8</Name>
+>         <Section>3</Section>
+>         <Text>street</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>30</Left>
+>         <Top>855</Top>
+>         <Width>3420</Width>
+>         <Height>255</Height>
+>         <CanGrow>-1</CanGrow>
+>         <CanShrink>-1</CanShrink>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>fldHome</Name>
+>         <Section>3</Section>
+>         <Text>Home:</Text>
+>         <Left>4515</Left>
+>         <Top>600</Top>
+>         <Width>825</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>fldHome1</Name>
+>         <Section>3</Section>
+>         <Text>Work:</Text>
+>         <Left>4515</Left>
+>         <Top>870</Top>
+>         <Width>825</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>fldHome2</Name>
+>         <Section>3</Section>
+>         <Text>Cell:</Text>
+>         <Left>4515</Left>
+>         <Top>1140</Top>
+>         <Width>825</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>fldHome3</Name>
+>         <Section>3</Section>
+>         <Text>Beeper:</Text>
+>         <Left>6915</Left>
+>         <Top>600</Top>
+>         <Width>825</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>fldHome4</Name>
+>         <Section>3</Section>
+>         <Text>Partner:</Text>
+>         <Left>6915</Left>
+>         <Top>870</Top>
+>         <Width>825</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>fldHome5</Name>
+>         <Section>3</Section>
+>         <Text>Fax:</Text>
+>         <Left>6915</Left>
+>         <Top>1140</Top>
+>         <Width>825</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field9</Name>
+>         <Section>3</Section>
+>         <Text>home_phone</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>5385</Left>
+>         <Top>600</Top>
+>         <Width>1545</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field10</Name>
+>         <Section>3</Section>
+>         <Text>work_phone</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>5385</Left>
+>         <Top>870</Top>
+>         <Width>1545</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field11</Name>
+>         <Section>3</Section>
+>         <Text>cell_phone</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>5385</Left>
+>         <Top>1140</Top>
+>         <Width>1545</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field12</Name>
+>         <Section>3</Section>
+>         <Text>beeper_phone</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>7785</Left>
+>         <Top>600</Top>
+>         <Width>1545</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field13</Name>
+>         <Section>3</Section>
+>         <Text>partner_phone</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>7785</Left>
+>         <Top>870</Top>
+>         <Width>1545</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field14</Name>
+>         <Section>3</Section>
+>         <Text>fax_phone</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>7785</Left>
+>         <Top>1140</Top>
+>         <Width>1545</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field16</Name>
+>         <Section>3</Section>
+>         <Text>customer_id</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>9510</Left>
+>         <Width>1440</Width>
+>         <Height>210</Height>
+>         <Align>8</Align>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field17</Name>
+>         <Section>3</Section>
+>         <Text>customer_name</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>7635</Left>
+>         <Top>225</Top>
+>         <Width>3315</Width>
+>         <Height>195</Height>
+>         <Align>8</Align>
+>         <CanGrow>-1</CanGrow>
+>         <CanShrink>-1</CanShrink>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>discountLbl</Name>
+>         <Section>3</Section>
+>         <Text>Discount</Text>
+>         <Left>8385</Left>
+>         <Top>2280</Top>
+>         <Width>1005</Width>
+>         <Height>405</Height>
+>         <Align>6</Align>
+>         <BackStyle>1</BackStyle>
+>         <BackColor>14474460</BackColor>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <WordWrap>0</WordWrap>
+>         <Anchor>1</Anchor>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>interestLbl</Name>
+>         <Section>3</Section>
+>         <Text>Interest</Text>
+>         <Left>6090</Left>
+>         <Top>2280</Top>
+>         <Width>1080</Width>
+>         <Height>405</Height>
+>         <Align>6</Align>
+>         <BackStyle>1</BackStyle>
+>         <BackColor>14474460</BackColor>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <WordWrap>0</WordWrap>
+>         <Anchor>1</Anchor>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>ledger_dateLbl</Name>
+>         <Section>3</Section>
+>         <Text>Date</Text>
+>         <Top>2280</Top>
+>         <Width>945</Width>
+>         <Height>405</Height>
+>         <Align>6</Align>
+>         <BackStyle>1</BackStyle>
+>         <BackColor>14474460</BackColor>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <WordWrap>0</WordWrap>
+>         <Anchor>1</Anchor>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>ledger_idLbl</Name>
+>         <Section>3</Section>
+>         <Text>Invoice</Text>
+>         <Left>1980</Left>
+>         <Top>2280</Top>
+>         <Width>795</Width>
+>         <Height>405</Height>
+>         <Align>6</Align>
+>         <BackStyle>1</BackStyle>
+>         <BackColor>14474460</BackColor>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <WordWrap>0</WordWrap>
+>         <Anchor>1</Anchor>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>non-taxableLbl</Name>
+>         <Section>3</Section>
+>         <Text>NonTax</Text>
+>         <Left>4935</Left>
+>         <Top>2280</Top>
+>         <Width>1140</Width>
+>         <Height>405</Height>
+>         <Align>6</Align>
+>         <BackStyle>1</BackStyle>
+>         <BackColor>14474460</BackColor>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <WordWrap>0</WordWrap>
+>         <Anchor>1</Anchor>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>paymentLbl</Name>
+>         <Section>3</Section>
+>         <Text>Payment</Text>
+>         <Left>7185</Left>
+>         <Top>2280</Top>
+>         <Width>1185</Width>
+>         <Height>405</Height>
+>         <Align>6</Align>
+>         <BackStyle>1</BackStyle>
+>         <BackColor>14474460</BackColor>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <WordWrap>0</WordWrap>
+>         <Anchor>1</Anchor>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>referenceLbl</Name>
+>         <Section>3</Section>
+>         <Text>Ref</Text>
+>         <Left>2790</Left>
+>         <Top>2280</Top>
+>         <Width>975</Width>
+>         <Height>405</Height>
+>         <Align>6</Align>
+>         <BackStyle>1</BackStyle>
+>         <BackColor>14474460</BackColor>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <WordWrap>0</WordWrap>
+>         <Anchor>1</Anchor>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>taxableLbl</Name>
+>         <Section>3</Section>
+>         <Text>Taxable</Text>
+>         <Left>3780</Left>
+>         <Top>2280</Top>
+>         <Width>1140</Width>
+>         <Height>405</Height>
+>         <Align>6</Align>
+>         <BackStyle>1</BackStyle>
+>         <BackColor>14474460</BackColor>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <WordWrap>0</WordWrap>
+>         <Anchor>1</Anchor>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>discountLbl1</Name>
+>         <Section>3</Section>
+>         <Text>Balance</Text>
+>         <Left>9405</Left>
+>         <Top>2280</Top>
+>         <Width>1200</Width>
+>         <Height>405</Height>
+>         <Align>6</Align>
+>         <BackStyle>1</BackStyle>
+>         <BackColor>14474460</BackColor>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <WordWrap>0</WordWrap>
+>         <Anchor>1</Anchor>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>Field4</Name>
+>         <Section>3</Section>
+>         <Text>Jefferson Lumber</Text>
+>         <Top>15</Top>
+>         <Width>1845</Width>
+>         <Height>240</Height>
+>         <Font>
+>           <Name>Microsoft Sans Serif</Name>
+>           <Size>9.75</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>       <Field>
+>         <Name>ledger_dateLbl1</Name>
+>         <Section>3</Section>
+>         <Text>Statement</Text>
+>         <Left>960</Left>
+>         <Top>2280</Top>
+>         <Width>1005</Width>
+>         <Height>405</Height>
+>         <Align>6</Align>
+>         <BackStyle>1</BackStyle>
+>         <BackColor>14474460</BackColor>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <WordWrap>0</WordWrap>
+>         <Anchor>1</Anchor>
+>         <Font>
+>           <Name>Arial</Name>
+>           <Size>9</Size>
+>           <Bold>-1</Bold>
+>         </Font>
+>       </Field>
+>     </Fields>
+>   </Report>
+>   <!--Report *** rptLedger ***-->
+>   <Report>
+>     <Name>rptLedger</Name>
+>     <DataSource>
+>       <ConnectionString>C:\Documents and Settings\Administrator\My
+Documents\Visual Studio
+Projects\LumberAid\Reports\rptHistory.xsd</ConnectionString>
+>       <RecordSource>Ledger</RecordSource>
+>     </DataSource>
+>     <Layout>
+>       <Width>10590</Width>
+>       <Orientation>1</Orientation>
+>     </Layout>
+>     <Font>
+>       <Name>Arial</Name>
+>       <Size>9</Size>
+>     </Font>
+>     <Groups />
+>     <Sections>
+>       <Section>
+>         <Name>Detail</Name>
+>         <Type>0</Type>
+>         <Height>270</Height>
+>       </Section>
+>       <Section>
+>         <Name>Header</Name>
+>         <Type>1</Type>
+>         <Height>15</Height>
+>         <Visible>0</Visible>
+>       </Section>
+>       <Section>
+>         <Name>Footer</Name>
+>         <Type>2</Type>
+>         <Visible>0</Visible>
+>       </Section>
+>       <Section>
+>         <Name>PageHeader</Name>
+>         <Type>3</Type>
+>         <Height>15</Height>
+>         <Visible>0</Visible>
+>       </Section>
+>       <Section>
+>         <Name>PageFooter</Name>
+>         <Type>4</Type>
+>         <Visible>0</Visible>
+>       </Section>
+>     </Sections>
+>     <Fields>
+>       <Field>
+>         <Name>discountCtl</Name>
+>         <Section>0</Section>
+>         <Text>payment</Text>
+>         <Calculated>-1</Calculated>
+>         <Format>Currency</Format>
+>         <Left>7230</Left>
+>         <Width>1095</Width>
+>         <Height>225</Height>
+>         <Align>8</Align>
+>       </Field>
+>       <Field>
+>         <Name>interestCtl</Name>
+>         <Section>0</Section>
+>         <Text>interest</Text>
+>         <Calculated>-1</Calculated>
+>         <Format>Currency</Format>
+>         <Left>6120</Left>
+>         <Width>1035</Width>
+>         <Height>225</Height>
+>         <Align>8</Align>
+>       </Field>
+>       <Field>
+>         <Name>ledger_dateCtl</Name>
+>         <Section>0</Section>
+>         <Text>ledger_date</Text>
+>         <Calculated>-1</Calculated>
+>         <Format>Short Date</Format>
+>         <Width>960</Width>
+>         <Height>225</Height>
+>         <Align>8</Align>
+>       </Field>
+>       <Field>
+>         <Name>ledger_idCtl</Name>
+>         <Section>0</Section>
+>         <Text>ledger_id</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>2010</Left>
+>         <Width>750</Width>
+>         <Height>225</Height>
+>         <Align>8</Align>
+>       </Field>
+>       <Field>
+>         <Name>non-taxableCtl</Name>
+>         <Section>0</Section>
+>         <Text>[non-taxable]</Text>
+>         <Calculated>-1</Calculated>
+>         <Format>Currency</Format>
+>         <Left>4950</Left>
+>         <Width>1110</Width>
+>         <Height>225</Height>
+>         <Align>8</Align>
+>       </Field>
+>       <Field>
+>         <Name>paymentCtl</Name>
+>         <Section>0</Section>
+>         <Text>discount</Text>
+>         <Calculated>-1</Calculated>
+>         <Format>Currency</Format>
+>         <Left>8400</Left>
+>         <Width>1050</Width>
+>         <Height>225</Height>
+>         <Align>8</Align>
+>       </Field>
+>       <Field>
+>         <Name>referenceCtl</Name>
+>         <Section>0</Section>
+>         <Text>reference</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>2805</Left>
+>         <Width>975</Width>
+>         <Height>225</Height>
+>         <Align>8</Align>
+>       </Field>
+>       <Field>
+>         <Name>taxableCtl</Name>
+>         <Section>0</Section>
+>         <Text>taxable</Text>
+>         <Calculated>-1</Calculated>
+>         <Format>Currency</Format>
+>         <Left>3795</Left>
+>         <Width>1155</Width>
+>         <Height>225</Height>
+>         <Align>8</Align>
+>       </Field>
+>       <Field>
+>         <Name>Field1</Name>
+>         <Section>0</Section>
+>         <Left>960</Left>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>Field</Name>
+>         <Section>0</Section>
+>         <Left>1980</Left>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>Field2</Name>
+>         <Section>0</Section>
+>         <Left>2790</Left>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>Field3</Name>
+>         <Section>0</Section>
+>         <Left>3780</Left>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>Field4</Name>
+>         <Section>0</Section>
+>         <Left>4935</Left>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>Field5</Name>
+>         <Section>0</Section>
+>         <Left>6090</Left>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>Field6</Name>
+>         <Section>0</Section>
+>         <Left>7185</Left>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>Field7</Name>
+>         <Section>0</Section>
+>         <Left>8385</Left>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>Field8</Name>
+>         <Section>0</Section>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>Field10</Name>
+>         <Section>0</Section>
+>         <Left>10590</Left>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>Field11</Name>
+>         <Section>0</Section>
+>         <Text>amount</Text>
+>         <Calculated>-1</Calculated>
+>         <Format>Currency</Format>
+>         <Left>9360</Left>
+>         <Width>1155</Width>
+>         <Height>225</Height>
+>         <Align>8</Align>
+>         <RunningSum>1</RunningSum>
+>       </Field>
+>       <Field>
+>         <Name>Field12</Name>
+>         <Section>0</Section>
+>         <Top>255</Top>
+>         <Width>10590</Width>
+>         <Height>15</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>       <Field>
+>         <Name>ledger_idCtl1</Name>
+>         <Section>0</Section>
+>         <Text>statement_date</Text>
+>         <Calculated>-1</Calculated>
+>         <Left>975</Left>
+>         <Width>975</Width>
+>         <Height>225</Height>
+>         <Align>8</Align>
+>       </Field>
+>       <Field>
+>         <Name>Field9</Name>
+>         <Section>0</Section>
+>         <Left>9465</Left>
+>         <Height>270</Height>
+>         <BorderStyle>1</BorderStyle>
+>         <LineWidth>30</LineWidth>
+>         <LineSlant>1</LineSlant>
+>       </Field>
+>     </Fields>
+>   </Report>
+> </Reports>
+>
+
+
+----------------------------------------------------------------------------
+----
+
+
+> ALTER          PROCEDURE sprpStatement
+> @Customer_Id INT,
+> @Statement_Date SMALLDATETIME
+> AS
+> DECLARE @Previous_Balance AS MONEY
+> DECLARE @Starting_Balance AS MONEY
+> DECLARE @Over120 AS MONEY
+> DECLARE @Over60 AS MONEY
+> DECLARE @Over90 AS MONEY
+> DECLARE @Total_Balance AS MONEY
+> DECLARE @FirstRecord AS VARCHAR(12)
+>
+> SELECT
+> @Starting_Balance = ISNULL(starting_balance,0.00)
+> FROM
+> tbl_customer
+> WHERE
+> customer_id = @Customer_ID
+>
+> SELECT
+> @Previous_Balance = SUM(ISNULL(amount,0.00))
+> FROM
+> tbl_ledger
+> WHERE
+> CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) <
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,101))  AND
+> customer_id = @customer_id
+>
+> SELECT @Over120 = SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE
+customer_id=@Customer_Id AND
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) <
+DATEADD(DAY,-120,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,1
+01)))
+> SELECT @Over60 = SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE
+customer_id=@Customer_Id AND
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) <
+DATEADD(DAY,-60,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,10
+1)))
+> SELECT @Over90 = SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE
+customer_id=@Customer_Id AND
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) <
+DATEADD(DAY,-90,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,10
+1)))
+> SELECT @Total_Balance = SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE
+customer_id=@Customer_Id
+>
+> SELECT
+> customer_id,
+> RTRIM(LTRIM(ISNULL(prefix,'') + ' ' + ISNULL(first_name,'') + ' ' +
+ISNULL(last_name,'') + CASE WHEN LEN(ISNULL(prefix,'') +
+ISNULL(first_name,'') + ISNULL(last_name,'') + ISNULL(middle_initial,''))>0
+THEN char(13) + char(10) ELSE '' END + ISNULL(company_name,''))) AS
+customer_name,
+> LTRIM(RTRIM(ISNULL(street1,'') + CASE WHEN ISNULL(street1,'')<>'' THEN
+char(13) + char(10) ELSE '' END + ISNULL(street2,''))) as street,
+> ISNULL(city,'') + ', ' + ISNULL(state,'') + ' ' + ISNULL(zip_code,'') AS
+city_state_zip,
+> CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,101)) as
+statement_date,
+> ISNULL(@Previous_Balance,0.00) + ISNULL(@Starting_Balance,0.00) as
+previous_balance,
+> ISNULL(@Total_Balance + @Starting_Balance,0) AS total_balance
+> FROM
+> tbl_customer
+> WHERE
+> customer_id = @customer_id
+>
+> SELECT TOP 1
+> @FirstRecord = ledger_id
+> FROM
+> tbl_ledger
+> WHERE
+> customer_id = @Customer_id AND
+> CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,101))
+> ORDER BY
+> CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)),
+> ledger_order
+>
+> SELECT
+> ledger_id,
+> ledger_date,
+> CASE WHEN type_id=1 THEN amount ELSE NULL END AS taxable,
+> CASE WHEN type_id=2 THEN amount ELSE NULL END AS [non-taxable],
+> CASE WHEN type_id=3 THEN amount ELSE NULL END AS payment,
+> CASE WHEN type_id=4 THEN amount ELSE NULL END AS discount,
+> CASE WHEN type_id=5 THEN amount ELSE NULL END AS interest,
+> reference,
+> CASE WHEN ledger_id = @FirstRecord THEN amount +
+ISNULL(@Previous_Balance,0.00) + ISNULL(@Starting_Balance,0.00) ELSE amount
+END AS amount
+> FROM
+> tbl_ledger
+> WHERE
+> customer_id = @Customer_Id AND
+> CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,101))
+> ORDER BY
+> CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)),
+> ledger_order
+>
+> SELECT @Over120 = SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE
+customer_id=@Customer_Id AND
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) <
+DATEADD(DAY,-120,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,1
+01)))
+> SELECT @Over60 = SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE
+customer_id=@Customer_Id AND
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) <
+DATEADD(DAY,-60,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,10
+1)))
+> SELECT @Over90 = SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE
+customer_id=@Customer_Id AND
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) <
+DATEADD(DAY,-90,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,10
+1)))
+> SELECT @Total_Balance = SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE
+customer_id=@Customer_Id
+> SET @Total_Balance = ISNULL(@Total_Balance,0.00) +
+ISNULL(@Starting_Balance,0.00)
+>
+>
+> IF(@Total_Balance>0.00 AND @Over60 IS NOT NULL)
+> SELECT
+> ISNULL(@Over60,0.00) + ISNULL(@Starting_Balance,0.00) AS Over60,
+> CASE WHEN (ISNULL(@Over60,0.00) + ISNULL(@Starting_Balance,0.00)) > 0 THEN
+ISNULL(@Over90,0.00) + ISNULL(@Starting_Balance,0.00) ELSE 0.00 END AS
+Over90,
+> CASE WHEN (ISNULL(@Over60,0.00) + ISNULL(@Starting_Balance,0.00)) > 0 AND
+(ISNULL(@Over90,0.00) + ISNULL(@Starting_Balance,0.00)) > 0 THEN
+ISNULL(@Over120,0.00) + ISNULL(@Starting_Balance,0.00) ELSE 0.00 END AS
+Over120,
+> ISNULL(@Total_Balance,0.00) AS Total_Balance
+> ELSE
+> SELECT
+> 0.00 AS Over120,
+> 0.00 AS Over60,
+> 0.00 AS Over90,
+> ISNULL(@Total_Balance,0.00) AS Total_Balance
+>
+
+------=_NextPart_000_00A3_01C42C7F.0A9F5760
+Content-Type: text/xml;
+	name="rptHistory.xml"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	filename="rptHistory.xml"
+
+<?xml version=3D"1.0" encoding=3D"Windows-1252"?>
+<Reports>
+  <!--Report *** rptCustomerHdr ***-->
+  <Report>
+    <Name>rptCustomerHdr</Name>
+    <DataSource>
+      <ConnectionString>C:\Documents and Settings\Administrator\My =
+Documents\Visual Studio =
+Projects\LumberAid\Reports\rptHistory.xsd</ConnectionString>
+      <RecordSource>Customer</RecordSource>
+    </DataSource>
+    <Layout>
+      <Width>11010</Width>
+      <MarginLeft>432</MarginLeft>
+      <MarginTop>432</MarginTop>
+      <MarginRight>432</MarginRight>
+      <MarginBottom>720</MarginBottom>
+      <Orientation>1</Orientation>
+      <PaperSize>1</PaperSize>
+    </Layout>
+    <Font>
+      <Name>Arial</Name>
+      <Size>9</Size>
+    </Font>
+    <Groups />
+    <Sections>
+      <Section>
+        <Name>Detail</Name>
+        <Type>0</Type>
+        <Height>1395</Height>
+      </Section>
+      <Section>
+        <Name>Header</Name>
+        <Type>1</Type>
+        <Visible>0</Visible>
+      </Section>
+      <Section>
+        <Name>Footer</Name>
+        <Type>2</Type>
+        <Height>405</Height>
+      </Section>
+      <Section>
+        <Name>PageHeader</Name>
+        <Type>3</Type>
+        <Height>2685</Height>
+      </Section>
+      <Section>
+        <Name>PageFooter</Name>
+        <Type>4</Type>
+        <Height>555</Height>
+      </Section>
+    </Sections>
+    <Fields>
+      <Field>
+        <Name>ftrRight</Name>
+        <Section>4</Section>
+        <Text>"Page " &amp; [Page] &amp; " of " &amp; [Pages]</Text>
+        <Calculated>-1</Calculated>
+        <Left>6285</Left>
+        <Top>195</Top>
+        <Width>4680</Width>
+        <Height>300</Height>
+        <Align>2</Align>
+      </Field>
+      <Field>
+        <Name>fldLedgerSub</Name>
+        <Section>0</Section>
+        <Calculated>-1</Calculated>
+        <Width>10620</Width>
+        <Height>1395</Height>
+        <CanGrow>-1</CanGrow>
+        <Subreport>rptLedger</Subreport>
+      </Field>
+      <Field>
+        <Name>Field</Name>
+        <Section>2</Section>
+        <Text>Total Balance:</Text>
+        <Left>6525</Left>
+        <Top>15</Top>
+        <Width>1890</Width>
+        <Height>345</Height>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field15</Name>
+        <Section>2</Section>
+        <Text>total_balance</Text>
+        <Calculated>-1</Calculated>
+        <Format>Currency</Format>
+        <Left>8415</Left>
+        <Top>15</Top>
+        <Width>2205</Width>
+        <Height>360</Height>
+        <Align>2</Align>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field1</Name>
+        <Section>3</Section>
+        <Text>HISTORY </Text>
+        <Left>4410</Left>
+        <Width>1905</Width>
+        <Height>435</Height>
+        <Align>7</Align>
+        <CanGrow>-1</CanGrow>
+        <CanShrink>-1</CanShrink>
+        <Font>
+          <Name>Arial</Name>
+          <Size>18</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field2</Name>
+        <Section>3</Section>
+        <Text>customer_name</Text>
+        <Calculated>-1</Calculated>
+        <Left>15</Left>
+        <Top>585</Top>
+        <Width>3450</Width>
+        <Height>255</Height>
+        <CanGrow>-1</CanGrow>
+        <CanShrink>-1</CanShrink>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field3</Name>
+        <Section>3</Section>
+        <Text>city_state_zip</Text>
+        <Calculated>-1</Calculated>
+        <Left>30</Left>
+        <Top>1110</Top>
+        <Width>3420</Width>
+        <Height>255</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field6</Name>
+        <Section>3</Section>
+        <Text>starting_balance</Text>
+        <Calculated>-1</Calculated>
+        <Format>Currency</Format>
+        <Left>8415</Left>
+        <Top>1815</Top>
+        <Width>2205</Width>
+        <Height>360</Height>
+        <Align>2</Align>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field7</Name>
+        <Section>3</Section>
+        <Text>Starting Balance:</Text>
+        <Left>6525</Left>
+        <Top>1815</Top>
+        <Width>1890</Width>
+        <Height>345</Height>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field8</Name>
+        <Section>3</Section>
+        <Text>street</Text>
+        <Calculated>-1</Calculated>
+        <Left>30</Left>
+        <Top>855</Top>
+        <Width>3420</Width>
+        <Height>255</Height>
+        <CanGrow>-1</CanGrow>
+        <CanShrink>-1</CanShrink>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>fldHome</Name>
+        <Section>3</Section>
+        <Text>Home:</Text>
+        <Left>4515</Left>
+        <Top>600</Top>
+        <Width>825</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>fldHome1</Name>
+        <Section>3</Section>
+        <Text>Work:</Text>
+        <Left>4515</Left>
+        <Top>870</Top>
+        <Width>825</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>fldHome2</Name>
+        <Section>3</Section>
+        <Text>Cell:</Text>
+        <Left>4515</Left>
+        <Top>1140</Top>
+        <Width>825</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>fldHome3</Name>
+        <Section>3</Section>
+        <Text>Beeper:</Text>
+        <Left>6915</Left>
+        <Top>600</Top>
+        <Width>825</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>fldHome4</Name>
+        <Section>3</Section>
+        <Text>Partner:</Text>
+        <Left>6915</Left>
+        <Top>870</Top>
+        <Width>825</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>fldHome5</Name>
+        <Section>3</Section>
+        <Text>Fax:</Text>
+        <Left>6915</Left>
+        <Top>1140</Top>
+        <Width>825</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field9</Name>
+        <Section>3</Section>
+        <Text>home_phone</Text>
+        <Calculated>-1</Calculated>
+        <Left>5385</Left>
+        <Top>600</Top>
+        <Width>1545</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field10</Name>
+        <Section>3</Section>
+        <Text>work_phone</Text>
+        <Calculated>-1</Calculated>
+        <Left>5385</Left>
+        <Top>870</Top>
+        <Width>1545</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field11</Name>
+        <Section>3</Section>
+        <Text>cell_phone</Text>
+        <Calculated>-1</Calculated>
+        <Left>5385</Left>
+        <Top>1140</Top>
+        <Width>1545</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field12</Name>
+        <Section>3</Section>
+        <Text>beeper_phone</Text>
+        <Calculated>-1</Calculated>
+        <Left>7785</Left>
+        <Top>600</Top>
+        <Width>1545</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field13</Name>
+        <Section>3</Section>
+        <Text>partner_phone</Text>
+        <Calculated>-1</Calculated>
+        <Left>7785</Left>
+        <Top>870</Top>
+        <Width>1545</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field14</Name>
+        <Section>3</Section>
+        <Text>fax_phone</Text>
+        <Calculated>-1</Calculated>
+        <Left>7785</Left>
+        <Top>1140</Top>
+        <Width>1545</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field16</Name>
+        <Section>3</Section>
+        <Text>customer_id</Text>
+        <Calculated>-1</Calculated>
+        <Left>9510</Left>
+        <Width>1440</Width>
+        <Height>210</Height>
+        <Align>8</Align>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field17</Name>
+        <Section>3</Section>
+        <Text>customer_name</Text>
+        <Calculated>-1</Calculated>
+        <Left>7635</Left>
+        <Top>225</Top>
+        <Width>3315</Width>
+        <Height>195</Height>
+        <Align>8</Align>
+        <CanGrow>-1</CanGrow>
+        <CanShrink>-1</CanShrink>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>discountLbl</Name>
+        <Section>3</Section>
+        <Text>Discount</Text>
+        <Left>8385</Left>
+        <Top>2280</Top>
+        <Width>1005</Width>
+        <Height>405</Height>
+        <Align>6</Align>
+        <BackStyle>1</BackStyle>
+        <BackColor>14474460</BackColor>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <WordWrap>0</WordWrap>
+        <Anchor>1</Anchor>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>interestLbl</Name>
+        <Section>3</Section>
+        <Text>Interest</Text>
+        <Left>6090</Left>
+        <Top>2280</Top>
+        <Width>1080</Width>
+        <Height>405</Height>
+        <Align>6</Align>
+        <BackStyle>1</BackStyle>
+        <BackColor>14474460</BackColor>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <WordWrap>0</WordWrap>
+        <Anchor>1</Anchor>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>ledger_dateLbl</Name>
+        <Section>3</Section>
+        <Text>Date</Text>
+        <Top>2280</Top>
+        <Width>945</Width>
+        <Height>405</Height>
+        <Align>6</Align>
+        <BackStyle>1</BackStyle>
+        <BackColor>14474460</BackColor>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <WordWrap>0</WordWrap>
+        <Anchor>1</Anchor>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>ledger_idLbl</Name>
+        <Section>3</Section>
+        <Text>Invoice</Text>
+        <Left>1980</Left>
+        <Top>2280</Top>
+        <Width>795</Width>
+        <Height>405</Height>
+        <Align>6</Align>
+        <BackStyle>1</BackStyle>
+        <BackColor>14474460</BackColor>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <WordWrap>0</WordWrap>
+        <Anchor>1</Anchor>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>non-taxableLbl</Name>
+        <Section>3</Section>
+        <Text>NonTax</Text>
+        <Left>4935</Left>
+        <Top>2280</Top>
+        <Width>1140</Width>
+        <Height>405</Height>
+        <Align>6</Align>
+        <BackStyle>1</BackStyle>
+        <BackColor>14474460</BackColor>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <WordWrap>0</WordWrap>
+        <Anchor>1</Anchor>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>paymentLbl</Name>
+        <Section>3</Section>
+        <Text>Payment</Text>
+        <Left>7185</Left>
+        <Top>2280</Top>
+        <Width>1185</Width>
+        <Height>405</Height>
+        <Align>6</Align>
+        <BackStyle>1</BackStyle>
+        <BackColor>14474460</BackColor>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <WordWrap>0</WordWrap>
+        <Anchor>1</Anchor>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>referenceLbl</Name>
+        <Section>3</Section>
+        <Text>Ref</Text>
+        <Left>2790</Left>
+        <Top>2280</Top>
+        <Width>975</Width>
+        <Height>405</Height>
+        <Align>6</Align>
+        <BackStyle>1</BackStyle>
+        <BackColor>14474460</BackColor>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <WordWrap>0</WordWrap>
+        <Anchor>1</Anchor>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>taxableLbl</Name>
+        <Section>3</Section>
+        <Text>Taxable</Text>
+        <Left>3780</Left>
+        <Top>2280</Top>
+        <Width>1140</Width>
+        <Height>405</Height>
+        <Align>6</Align>
+        <BackStyle>1</BackStyle>
+        <BackColor>14474460</BackColor>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <WordWrap>0</WordWrap>
+        <Anchor>1</Anchor>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>discountLbl1</Name>
+        <Section>3</Section>
+        <Text>Balance</Text>
+        <Left>9405</Left>
+        <Top>2280</Top>
+        <Width>1200</Width>
+        <Height>405</Height>
+        <Align>6</Align>
+        <BackStyle>1</BackStyle>
+        <BackColor>14474460</BackColor>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <WordWrap>0</WordWrap>
+        <Anchor>1</Anchor>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>Field4</Name>
+        <Section>3</Section>
+        <Text>Jefferson Lumber</Text>
+        <Top>15</Top>
+        <Width>1845</Width>
+        <Height>240</Height>
+        <Font>
+          <Name>Microsoft Sans Serif</Name>
+          <Size>9.75</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+      <Field>
+        <Name>ledger_dateLbl1</Name>
+        <Section>3</Section>
+        <Text>Statement</Text>
+        <Left>960</Left>
+        <Top>2280</Top>
+        <Width>1005</Width>
+        <Height>405</Height>
+        <Align>6</Align>
+        <BackStyle>1</BackStyle>
+        <BackColor>14474460</BackColor>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <WordWrap>0</WordWrap>
+        <Anchor>1</Anchor>
+        <Font>
+          <Name>Arial</Name>
+          <Size>9</Size>
+          <Bold>-1</Bold>
+        </Font>
+      </Field>
+    </Fields>
+  </Report>
+  <!--Report *** rptLedger ***-->
+  <Report>
+    <Name>rptLedger</Name>
+    <DataSource>
+      <ConnectionString>C:\Documents and Settings\Administrator\My =
+Documents\Visual Studio =
+Projects\LumberAid\Reports\rptHistory.xsd</ConnectionString>
+      <RecordSource>Ledger</RecordSource>
+    </DataSource>
+    <Layout>
+      <Width>10590</Width>
+      <Orientation>1</Orientation>
+    </Layout>
+    <Font>
+      <Name>Arial</Name>
+      <Size>9</Size>
+    </Font>
+    <Groups />
+    <Sections>
+      <Section>
+        <Name>Detail</Name>
+        <Type>0</Type>
+        <Height>270</Height>
+      </Section>
+      <Section>
+        <Name>Header</Name>
+        <Type>1</Type>
+        <Height>15</Height>
+        <Visible>0</Visible>
+      </Section>
+      <Section>
+        <Name>Footer</Name>
+        <Type>2</Type>
+        <Visible>0</Visible>
+      </Section>
+      <Section>
+        <Name>PageHeader</Name>
+        <Type>3</Type>
+        <Height>15</Height>
+        <Visible>0</Visible>
+      </Section>
+      <Section>
+        <Name>PageFooter</Name>
+        <Type>4</Type>
+        <Visible>0</Visible>
+      </Section>
+    </Sections>
+    <Fields>
+      <Field>
+        <Name>discountCtl</Name>
+        <Section>0</Section>
+        <Text>payment</Text>
+        <Calculated>-1</Calculated>
+        <Format>Currency</Format>
+        <Left>7230</Left>
+        <Width>1095</Width>
+        <Height>225</Height>
+        <Align>8</Align>
+      </Field>
+      <Field>
+        <Name>interestCtl</Name>
+        <Section>0</Section>
+        <Text>interest</Text>
+        <Calculated>-1</Calculated>
+        <Format>Currency</Format>
+        <Left>6120</Left>
+        <Width>1035</Width>
+        <Height>225</Height>
+        <Align>8</Align>
+      </Field>
+      <Field>
+        <Name>ledger_dateCtl</Name>
+        <Section>0</Section>
+        <Text>ledger_date</Text>
+        <Calculated>-1</Calculated>
+        <Format>Short Date</Format>
+        <Width>960</Width>
+        <Height>225</Height>
+        <Align>8</Align>
+      </Field>
+      <Field>
+        <Name>ledger_idCtl</Name>
+        <Section>0</Section>
+        <Text>ledger_id</Text>
+        <Calculated>-1</Calculated>
+        <Left>2010</Left>
+        <Width>750</Width>
+        <Height>225</Height>
+        <Align>8</Align>
+      </Field>
+      <Field>
+        <Name>non-taxableCtl</Name>
+        <Section>0</Section>
+        <Text>[non-taxable]</Text>
+        <Calculated>-1</Calculated>
+        <Format>Currency</Format>
+        <Left>4950</Left>
+        <Width>1110</Width>
+        <Height>225</Height>
+        <Align>8</Align>
+      </Field>
+      <Field>
+        <Name>paymentCtl</Name>
+        <Section>0</Section>
+        <Text>discount</Text>
+        <Calculated>-1</Calculated>
+        <Format>Currency</Format>
+        <Left>8400</Left>
+        <Width>1050</Width>
+        <Height>225</Height>
+        <Align>8</Align>
+      </Field>
+      <Field>
+        <Name>referenceCtl</Name>
+        <Section>0</Section>
+        <Text>reference</Text>
+        <Calculated>-1</Calculated>
+        <Left>2805</Left>
+        <Width>975</Width>
+        <Height>225</Height>
+        <Align>8</Align>
+      </Field>
+      <Field>
+        <Name>taxableCtl</Name>
+        <Section>0</Section>
+        <Text>taxable</Text>
+        <Calculated>-1</Calculated>
+        <Format>Currency</Format>
+        <Left>3795</Left>
+        <Width>1155</Width>
+        <Height>225</Height>
+        <Align>8</Align>
+      </Field>
+      <Field>
+        <Name>Field1</Name>
+        <Section>0</Section>
+        <Left>960</Left>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>Field</Name>
+        <Section>0</Section>
+        <Left>1980</Left>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>Field2</Name>
+        <Section>0</Section>
+        <Left>2790</Left>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>Field3</Name>
+        <Section>0</Section>
+        <Left>3780</Left>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>Field4</Name>
+        <Section>0</Section>
+        <Left>4935</Left>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>Field5</Name>
+        <Section>0</Section>
+        <Left>6090</Left>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>Field6</Name>
+        <Section>0</Section>
+        <Left>7185</Left>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>Field7</Name>
+        <Section>0</Section>
+        <Left>8385</Left>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>Field8</Name>
+        <Section>0</Section>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>Field10</Name>
+        <Section>0</Section>
+        <Left>10590</Left>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>Field11</Name>
+        <Section>0</Section>
+        <Text>amount</Text>
+        <Calculated>-1</Calculated>
+        <Format>Currency</Format>
+        <Left>9360</Left>
+        <Width>1155</Width>
+        <Height>225</Height>
+        <Align>8</Align>
+        <RunningSum>1</RunningSum>
+      </Field>
+      <Field>
+        <Name>Field12</Name>
+        <Section>0</Section>
+        <Top>255</Top>
+        <Width>10590</Width>
+        <Height>15</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+      <Field>
+        <Name>ledger_idCtl1</Name>
+        <Section>0</Section>
+        <Text>statement_date</Text>
+        <Calculated>-1</Calculated>
+        <Left>975</Left>
+        <Width>975</Width>
+        <Height>225</Height>
+        <Align>8</Align>
+      </Field>
+      <Field>
+        <Name>Field9</Name>
+        <Section>0</Section>
+        <Left>9465</Left>
+        <Height>270</Height>
+        <BorderStyle>1</BorderStyle>
+        <LineWidth>30</LineWidth>
+        <LineSlant>1</LineSlant>
+      </Field>
+    </Fields>
+  </Report>
+</Reports>
+
+------=_NextPart_000_00A3_01C42C7F.0A9F5760
+Content-Type: application/octet-stream;
+	name="sprpStatement__UPDATE__4-23-2004.sql"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	filename="sprpStatement__UPDATE__4-23-2004.sql"
+
+ALTER          PROCEDURE sprpStatement
+	@Customer_Id 		INT,
+	@Statement_Date SMALLDATETIME
+AS
+	DECLARE @Previous_Balance AS MONEY
+	DECLARE @Starting_Balance AS MONEY
+	DECLARE @Over120 AS MONEY
+	DECLARE @Over60 AS MONEY
+	DECLARE @Over90 AS MONEY
+	DECLARE @Total_Balance AS MONEY
+	DECLARE @FirstRecord AS VARCHAR(12)
+
+	SELECT
+		@Starting_Balance =3D ISNULL(starting_balance,0.00)
+	FROM
+		tbl_customer
+	WHERE=20
+		customer_id =3D @Customer_ID
+=09
+	SELECT
+		@Previous_Balance =3D SUM(ISNULL(amount,0.00))=20
+	FROM
+		tbl_ledger
+	WHERE=20
+		CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) < =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,101))  AND
+		customer_id =3D @customer_id
+=09
+	SELECT @Over120 =3D SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE =
+customer_id=3D@Customer_Id AND =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) < =
+DATEADD(DAY,-120,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_dat=
+e,101)))
+	SELECT @Over60 =3D SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE =
+customer_id=3D@Customer_Id AND =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) < =
+DATEADD(DAY,-60,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date=
+,101)))
+	SELECT @Over90 =3D SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE =
+customer_id=3D@Customer_Id AND =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) < =
+DATEADD(DAY,-90,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date=
+,101)))
+	SELECT @Total_Balance =3D SUM(ISNULL(amount,0.00)) FROM tbl_ledger =
+WHERE customer_id=3D@Customer_Id=20
+
+	SELECT
+		customer_id,
+		RTRIM(LTRIM(ISNULL(prefix,'') + ' ' + ISNULL(first_name,'') + ' ' + =
+ISNULL(last_name,'') + CASE WHEN LEN(ISNULL(prefix,'') + =
+ISNULL(first_name,'') + ISNULL(last_name,'') + =
+ISNULL(middle_initial,''))>0 THEN char(13) + char(10) ELSE '' END + =
+ISNULL(company_name,''))) AS customer_name,
+		LTRIM(RTRIM(ISNULL(street1,'') + CASE WHEN ISNULL(street1,'')<>'' THEN =
+char(13) + char(10) ELSE '' END + ISNULL(street2,''))) as street,
+		ISNULL(city,'') + ', ' + ISNULL(state,'') + ' ' + ISNULL(zip_code,'') =
+AS city_state_zip,
+		CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,101)) as =
+statement_date,
+		ISNULL(@Previous_Balance,0.00) + ISNULL(@Starting_Balance,0.00) as =
+previous_balance,
+		ISNULL(@Total_Balance + @Starting_Balance,0) AS total_balance
+	FROM
+		tbl_customer
+	WHERE=20
+		customer_id =3D @customer_id
+
+	SELECT TOP 1
+		@FirstRecord =3D ledger_id
+	FROM=20
+		tbl_ledger=20
+	WHERE=20
+		customer_id =3D @Customer_id AND
+		CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) =3D =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,101))
+	ORDER BY
+		CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)),
+		ledger_order
+=09
+	SELECT=20
+		ledger_id,
+		ledger_date,
+		CASE WHEN type_id=3D1 THEN amount ELSE NULL END AS taxable,
+		CASE WHEN type_id=3D2 THEN amount ELSE NULL END AS [non-taxable],
+		CASE WHEN type_id=3D3 THEN amount ELSE NULL END AS payment,
+		CASE WHEN type_id=3D4 THEN amount ELSE NULL END AS discount,
+		CASE WHEN type_id=3D5 THEN amount ELSE NULL END AS interest,
+		reference,
+		CASE WHEN ledger_id =3D @FirstRecord THEN amount + =
+ISNULL(@Previous_Balance,0.00) + ISNULL(@Starting_Balance,0.00) ELSE =
+amount END AS amount
+	FROM
+		tbl_ledger
+	WHERE
+		customer_id =3D @Customer_Id AND
+		CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) =3D =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date,101))
+	ORDER BY
+		CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)),
+		ledger_order
+
+	SELECT @Over120 =3D SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE =
+customer_id=3D@Customer_Id AND =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) < =
+DATEADD(DAY,-120,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_dat=
+e,101)))
+	SELECT @Over60 =3D SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE =
+customer_id=3D@Customer_Id AND =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) < =
+DATEADD(DAY,-60,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date=
+,101)))
+	SELECT @Over90 =3D SUM(ISNULL(amount,0.00)) FROM tbl_ledger WHERE =
+customer_id=3D@Customer_Id AND =
+CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),statement_date,101)) < =
+DATEADD(DAY,-90,CONVERT(SMALLDATETIME,CONVERT(VARCHAR(50),@statement_date=
+,101)))
+	SELECT @Total_Balance =3D SUM(ISNULL(amount,0.00)) FROM tbl_ledger =
+WHERE customer_id=3D@Customer_Id=20
+	SET @Total_Balance =3D ISNULL(@Total_Balance,0.00) + =
+ISNULL(@Starting_Balance,0.00)
+=09
+
+	IF(@Total_Balance>0.00 AND @Over60 IS NOT NULL)
+		SELECT
+			ISNULL(@Over60,0.00) + ISNULL(@Starting_Balance,0.00) AS Over60,
+			CASE WHEN (ISNULL(@Over60,0.00) + ISNULL(@Starting_Balance,0.00)) > 0 =
+THEN ISNULL(@Over90,0.00) + ISNULL(@Starting_Balance,0.00) ELSE 0.00 END =
+AS Over90,
+			CASE WHEN (ISNULL(@Over60,0.00) + ISNULL(@Starting_Balance,0.00)) > 0 =
+AND (ISNULL(@Over90,0.00) + ISNULL(@Starting_Balance,0.00)) > 0 THEN =
+ISNULL(@Over120,0.00) + ISNULL(@Starting_Balance,0.00) ELSE 0.00 END AS =
+Over120,
+			ISNULL(@Total_Balance,0.00) AS Total_Balance
+	ELSE
+		SELECT
+			0.00 AS Over120,
+			0.00 AS Over60,
+			0.00 AS Over90,
+			ISNULL(@Total_Balance,0.00) AS Total_Balance
+
+------=_NextPart_000_00A3_01C42C7F.0A9F5760--
