@@ -1,0 +1,6 @@
+type_id,type_value
+1,Taxable
+2,Non-Taxable
+3,Payment
+4,Discount
+5,Interest
