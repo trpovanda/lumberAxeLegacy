@@ -1,0 +1,47 @@
+<h1 style=text-align:center;>HISTORY</h1>
+<table style=align-content:center;border:none;>
+  <tr>
+    <td style=text-align:left;padding-left:0px;>Jefferson Lumber</td>
+    <td style=padding-left:400px;></td>
+    <td style=text-align:right;padding-right:0px;>
+      <p>{{ledgerLookup_IDFilter.value}}</p>
+      <p>{{getCustomerInfoByLLID.data.first_name}} {{getCustomerInfoByLLID.data.last_name}}</p>
+      <p>{{getCustomerInfoByLLID.data.company_name}}</p>
+    </td>
+  </tr>
+</table>
+<div class="flex-container">
+  <div>
+    <p>{{getCustomerInfoByLLID.data.first_name}} {{getCustomerInfoByLLID.data.last_name}}</p><p>{{ getCustomerInfoByLLID.data.company_name}}
+    <p>{{getCustomerInfoByLLID.data.street_1}}</p>
+    <p>{{getCustomerInfoByLLID.data.city}}, {{getCustomerInfoByLLID.data.state}} {{getCustomerInfoByLLID.data.zip_code}}</p>
+  </div>
+  <div>
+    <p>Home: {{getCustomerInfoByLLID.data.home_phone}}</p>
+    <p>Work: {{getCustomerInfoByLLID.data.work_phone}}</p>
+    <p>Cell: {{getCustomerInfoByLLID.data.cell_phone}}</p>
+  </div>
+  <div>
+    <p>Email: {{getCustomerInfoByLLID.data.email}}</p>
+    <p>Partner: {{getCustomerInfoByLLID.data.partner_phone}}</p>
+    <p>Fax: {{getCustomerInfoByLLID.data.fax_phone}}</p>
+  </div>
+</div>
+<p><br></p>
+<p style=text-align:right>Starting Balance: $0.00<br></p>
+<table id="customers">
+  <tr>
+    <th>Statement Date</th>
+    <th>Ledger Date</th>
+    <th>Invoice #</th>
+    <th>Order Reference</th>
+    <th>Taxable</th>
+    <th>Non-Taxable</th>
+    <th>Interest</th>
+    <th>Payment</th>
+    <th>Discount</th>
+    <th>Balance</th>
+  </tr>
+  {{ generateLedgerHistoryHtml.data }}
+</table>
+<p style=text-align:right>Total Balance: {{getCurrentLedgerBalanceForLedgerHistory.data}}</p>
